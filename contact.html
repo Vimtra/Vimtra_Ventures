@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact Vimtra Ventures | Global Investment Firm</title>
+    <meta name="description" content="Get in touch with Vimtra Ventures. Find contact information and office locations for our teams in New York, San Francisco, Dallas, and India.">
+    <meta name="keywords" content="contact Vimtra Ventures, investment firm contact, venture capital contact, M&A advisory contact, global offices">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Vimtra Ventures",
+          "url": "https://vimtra.com",
+          "logo": "https://vimtra.com/images/logo.png",
+          "description": "Vimtra Ventures is a global private equity and venture capital firm specializing in high-stakes corporate finance, mergers & acquisitions, and strategic development.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "New York, San Francisco, Dallas & India"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1 732 666 2468",
+            "email": "syammada@vimtra.com",
+            "contactType": "customer service"
+          },
+          "sameAs": [
+            "https://www.instagram.com/vimtra_ventures/",
+            "https://www.facebook.com/profile.php/?id=100078611386991",
+            "https://www.linkedin.com/company/vimtra-ventures/"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "name": "Contact Vimtra Ventures | Global Investment Firm",
+          "description": "Get in touch with Vimtra Ventures. Find contact information and office locations for our teams in New York, San Francisco, Dallas, and India.",
+          "url": "https://vimtra.com/contact.html",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://vimtra.com/index.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "https://vimtra.com/contact.html"
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* Shared Custom Styles */
+        :root {
+            --primary-red: #c00000;
+            --dark-grey: #343a40;
+            --mid-grey: #6c757d;
+            --light-grey: #f8f9fa;
+            --white: #ffffff;
+            --silver: #cdd7d8; /* New Silver Color */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--dark-grey);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            transition: all 0.3s ease-in-out;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand img {
+            max-height: 60px; /* Adjust logo height */
+        }
+
+        .nav-link {
+            font-weight: 600;
+            transition: color 0.3s;
+            color: var(--dark-grey);
+            margin: 0 10px;
+        }
+
+        .nav-link.active{
+            color: var(--primary-red);
+        }
+        .nav-link:hover{
+            color: var(--primary-red);
+            box-shadow: 0 2px 0 var(--primary-red);
+            transition: box-shadow 0.5s ease-in-out;
+        }
+        
+        .navbar-toggler { border: none; }
+        .navbar-toggler:focus { box-shadow: none; }
+
+                /* MEGA MENU CUSTOM STYLES */
+        /* Remove dropdown arrow */
+        .navbar .dropdown-toggle::after {
+            display: none;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* STYLIZED MEGA MENU STYLES */
+         /* STYLIZED MEGA MENU STYLES */
+        .mega-menu {
+            position: absolute;
+            width: 600%;
+            /* height: 1000%; */
+            left: -200%;
+            /* right: 0; */
+            top: 100%;
+            background-color: var(--white);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-top: 3px solid var(--primary-red);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transform: translateX(-10%);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+            z-index: 1000;
+            padding: 40px 0;
+        }
+
+        .nav-item.dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu-grid {
+            display: grid;
+            /* Updated to create 3 columns on desktop */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .mega-menu-item {
+            position: relative;
+            height: 250px;
+            width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            /* Initial state for fade-up animation */
+            opacity: 0;
+            transform: translateY(20px);
+            /* Updated transition to include opacity */
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease;
+        }
+
+        .mega-menu-item:hover {
+            transform: translateY(0) scale(1.05);
+        }
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(1) { transition-delay: 0s; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%); }
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(2) { transition-delay: 0.05s; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%); }
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(3) { transition-delay: 0.1s; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%); }
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(4) { transition-delay: 0.15s; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%); }
+        /* .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(5) { transition-delay: 0.2s; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%); } */
+        /* .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(6) { transition-delay: 0.25s; background: none !important;} */
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(5)::after { background: none !important;}
+        .mega-menu-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+             background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+            transition: background 0.4s ease;
+        }
+
+        .mega-menu-item:not(.mega-menu-animation-container):hover::after {
+             background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+        }
+
+        .mega-menu-item-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            z-index: 2;
+        }
+
+        .mega-menu-item-content h5 {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .mega-menu-item-content .btn-learn-more {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        
+        .mega-menu-item:hover .mega-menu-item-content .btn-learn-more
+         {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .mega-menu-item-content p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            transition-delay: 0.1s;
+        }
+
+        .btn-learn-more {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            padding: 6px 14px;
+            background-color: var(--primary-red);
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+            transition-delay: 0.2s;
+            display: inline-block;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #a00000;
+            transform: scale(1.05);
+        }
+
+        /* NEW: Mega Menu Animation Styles */
+        .mega-menu-animation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--light-grey);
+            box-shadow: none;
+        }
+
+        .shape-animation-wrapper {
+            width: 100px;
+            height: 100px;
+        }
+
+        .shape-animation-wrapper svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .shape {
+            opacity: 0;
+            transform-origin: 50% 50%;
+        }
+
+        .shape-circle {
+            animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            animation-delay: 0s;
+        }
+        .shape-square {
+            animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            animation-delay: 3s;
+        }
+        .shape-triangle {
+            animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            animation-delay: 6s;
+        }
+
+        @keyframes shape-loop {
+            0% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+            10% { opacity: 1; transform: scale(1) rotate(0deg); }
+            23% { opacity: 1; transform: scale(1) rotate(90deg); }
+            33% { opacity: 0; transform: scale(0.5) rotate(90deg); }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+
+        @media (max-width: 1199.98px) and (min-width: 992px) {
+             .mega-menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .mega-menu {
+                display: none !important;
+            }
+            .nav-item.dropdown .dropdown-menu {
+                position: static; 
+                width: 100%;
+                box-shadow: none;
+                border: none;
+                margin-top: 0;
+                border-radius: 0;
+            }
+            .nav-item.dropdown .dropdown-menu .dropdown-item {
+                padding: 10px 20px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown .dropdown-menu {
+                display: none !important;
+            }
+            .nav-item.dropdown:hover .mega-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+        .section { padding: 100px 0; }
+
+        /* Page-Specific Styles */
+        .page-hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/contact-us.jpg') no-repeat center center;
+            background-size: cover;
+            color: var(--white);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .page-hero-section h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .contact-form-section {
+            background-color: var(--light-grey);
+            padding: 50px;
+            border-radius: 15px;
+        }
+        
+        .contact-info-section {
+            padding-left: 40px;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info-item .icon {
+            font-size: 1.5rem;
+            color: var(--primary-red);
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+        
+        .contact-info-item h5 {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info-item p {
+            margin: 0;
+            color: var(--mid-grey);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #a00000;
+            border-color: #a00000;
+            transform: translateY(-2px);
+        }
+        
+        .accordion-item {
+            border: none;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 0 !important;
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 1rem 0;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: transparent;
+            color: var(--primary-red);
+            box-shadow: none;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        
+        .accordion-body {
+            padding: 1rem 0;
+        }
+        
+        .accordion-body p {
+            margin-bottom: 1rem;
+            color: var(--mid-grey);
+        }
+        .accordion-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* NEW FOOTER STYLES */
+        .site-footer {
+            background-color: var(--dark-grey);
+            color: var(--light-grey);
+            padding: 60px 0;
+            font-size: 0.9rem;
+        }
+        .site-footer h5 {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px; /* Space for the line */
+        }
+        /* THE FIX IS HERE: Red accent line for headings */
+        .site-footer h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px; /* Width of the line */
+            height: 3px; /* Thickness of the line */
+            background-color: var(--primary-red);
+            border-radius: 2px;
+        }
+        .site-footer .footer-logo img {
+            max-height: 70px;
+            margin-bottom: 20px;
+        }
+        .site-footer p {
+            color: var(--light-grey);
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: var(--light-grey);
+            text-decoration: none;
+            transition: color 0.3s, padding-left 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--primary-red);
+            padding-left: 5px;
+        }
+        .footer-contact p {
+            margin-bottom: 15px;
+        }
+        .footer-contact a {
+            color: var(--light-grey);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-contact a:hover {
+            color: var(--primary-red);
+        }
+        .footer-contact i {
+            color: var(--primary-red);
+            margin-right: 10px;
+        }
+        .footer-social-icons a {
+            color: var(--mid-grey);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        .footer-social-icons a:hover {
+            color: var(--primary-red);
+        }
+        .footer-bottom-bar {
+            border-top: 1px solid #495057;
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: var(--mid-grey);
+        }
+        .footer-bottom-bar a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-bottom-bar a:hover {
+            color: var(--primary-red);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo.png" alt="Vimtra Ventures Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mergers&acquisitions.html">Mergers & Acquisitions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privateequity.html">Private Equity</a></li>
+                   <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="portfolio.html" id="ourPortfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Portfolio
+                        </a>
+                         <ul class="dropdown-menu" aria-labelledby="ourPortfolioDropdown">
+                            <li><a class="dropdown-item" href="it-portfolio.html">IT</a></li>
+                            <li><a class="dropdown-item" href="retails-portfolio.html">Retails</a></li>
+                            <li><a class="dropdown-item" href="healthcare-portfolio.html">Healthcare</a></li>
+                            <li><a class="dropdown-item" href="golfcommunities-portfolio.html">Sports Franchise and Entertainment</a></li>
+                            <li><a class="dropdown-item" href="hospitality-portfolio.html">Hospitality Industry</a></li>
+                        </ul>
+                        <div class="mega-menu" aria-labelledby="ourPortfolioDropdown">
+                            <div class="container">
+                                <div class="mega-menu-grid">
+                                    <a href="it-portfolio.html" class="mega-menu-item" style="background-image: url('images/3409297.jpg'); background-size: contain; background-position: center;">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Information Technology</h5>
+                                            <p>Strategic investments in cutting-edge tech and software companies.</p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <a href="retails-portfolio.html" class="mega-menu-item" style="background-image: url('images/ice-cream-cones-with-chocolate-kiwi-table.jpg'); background-size: contain; background-position: center;">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Retail Ventures</h5>
+                                            <p>Empowering innovative retail brands and consumer experiences.</p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <a href="healthcare-portfolio.html" class="mega-menu-item" style="background-image: url('images/clipboard-medical-desk.jpg'); background-size: contain; background-position: center;">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Healthcare</h5>
+                                            <p>Funding advancements in medical technology and healthcare services.</p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <a href="golfcommunities-portfolio.html" class="mega-menu-item" style="background-image: url('images/Sports\ Franchise\ and\ Entertainment.jpg'); background-size: auto; background-position: center;">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Sports Franchise and Entertainment</h5>
+                                            <p>Golf-centric and Soccer properties.</p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <a href="hospitality-portfolio.html" class="mega-menu-item" style="background-image: url('images/hospitality-link.jpg'); background-size: contain; background-position: center;">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Hospitality Industry</h5>
+                                            <p>Investing in exceptional hotels, resorts, and entertainment venues.</p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <!-- NEW Animation Container -->
+                                    <div class="mega-menu-item mega-menu-animation-container">
+                                        <div class="shape-animation-wrapper">
+                                            <svg viewBox="0 0 100 100">
+                                                <circle class="shape shape-circle" cx="50" cy="50" r="40" fill="rgba(192, 0, 0, 0.2)"/>
+                                                <rect class="shape shape-square" x="10" y="10" width="80" height="80" fill="rgba(45, 55, 72, 0.2)"/>
+                                                <polygon class="shape shape-triangle" points="50,10 90,90 10,90" fill="rgba(108, 117, 125, 0.2)"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="infrastructuredevelopment.html">Infrastructure Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="teams.html">Teams</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero-section">
+        <div class="container">
+            <h1 class="display-3">Get In Touch</h1>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-form-section">
+                        <h3 class="mb-4 fw-bold">Send us a Message</h3>
+                        <form id="contactForm" name="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="FirstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="FirstName" name="FirstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="LastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName" name="LastName" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="Email" name="Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="Phone" name="Phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="Subject" name="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Message" class="form-label">Message</label>
+                                <textarea class="form-control" id="Message" name="Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div id="form-status" class="mt-3"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-info-section">
+                        <h3 class="mb-4 fw-bold">Contact Information</h3>
+                        <div class="contact-info-item">
+                            <div class="icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+1 732 666 2468</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div>
+                                <h5>Email</h5>
+                                <p>syammada@vimtra.com</p>
+                            </div>
+                        </div>
+                        <hr class="my-5">
+                        <h3 class="mb-4 fw-bold">Global Offices</h3>
+                        <div class="accordion" id="accordionOffices">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingUsa">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUsa" aria-expanded="true" aria-controls="collapseUsa">
+                                        United States
+                                    </button>
+                                </h2>
+                                <div id="collapseUsa" class="accordion-collapse collapse show" aria-labelledby="headingUsa" data-bs-parent="#accordionOffices">
+                                    <div class="accordion-body">
+                                        <p><strong>New York:</strong> 45 Rockefeller plaza, Suite 2000, New York, 10111, USA</p>
+                                        <p><strong>California:</strong> 39355 California Street, Suite 303, 307, 310, Fremont, California 94538</p>
+                                        <p><strong>North Carolina:</strong><br>1981 J N Pease Place, Suite 104, Charlotte, North Carolina, 28262<br>1909 J N Pease Place, Suite 103, Charlotte, North Carolina, 28262</p>
+                                        <p><strong>Texas:</strong><br>2419 Coit Road, Suite A, Plano, Texas, 75075<br>2150 S. Central Expressway, Suite 200, McKinney, Texas, 75070</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingIndia">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndia" aria-expanded="false" aria-controls="collapseIndia">
+                                        India
+                                    </button>
+                                </h2>
+                                <div id="collapseIndia" class="accordion-collapse collapse" aria-labelledby="headingIndia" data-bs-parent="#accordionOffices">
+                                    <div class="accordion-body">
+                                        <p><strong>Chennai:</strong> 3rd floor, Plot No 11 and 12 Indira Priyadharshini Nagar, Perumbakkam Chennai, Tamil Nadu 600100</p>
+                                        <p><strong>Coimbatore:</strong> Block A1 Floor 2, Span Ventures SEZ, Embassy Tech Zone, Pollachi Main Road, Eachanari, Coimbatore 641021</p>
+                                        <p><strong>Hyderabad:</strong><br>1st floor, AV Hub, Vittal Rao Nagar, Madhapur, HITEC City, Hyderabad, Telangana-500081<br>Plot no:8, 3 rd floor Advithri Technology, Road no.1, Padmavathi Nagar, Mansoorabad Road, LB Nagar, Hyderabad-500070<br>5th floor, DSL Abacus IT Park, Beside DSL virtue mall, Uppal Khalsa village, IDA Uppal, Hyderabad 500013<br>9th Phase Rd, 9th Phase, VNR Residency, Salivahana Colony, KPHB Hyderabad, Telangana 500085</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPDATED FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo">
+                        <img src="images/logowhite.png" alt="Vimtra Ventures Logo - White">
+                    </div>
+                    <p>Vimtra Ventures is a global private equity and venture capital firm specializing in high-stakes corporate finance, mergers & acquisitions, and strategic development. With a diverse portfolio spanning technology, retail, healthcare, real estate, and hospitality, we partner with visionary enterprises to create long-term value and transformative growth worldwide.</p>
+                    <div class="footer-social-icons mt-4">
+                        <a href="https://www.instagram.com/vimtra_ventures/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php/?id=100078611386991" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/vimtra-ventures/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mergers&acquisitions.html">Mergers & Acquisitions</a></li>
+                        <li><a href="privateequity.html">Private Equity</a></li>
+                        <li><a href="infrastructuredevelopment.html">Infrastructure</a></li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <h5>Contact Us</h5>
+                    <div class="footer-contact">
+                        <p><i class="bi bi-geo-alt-fill"></i><a href="https://www.google.com/maps/search/?api=1&query=Vimtra+Ventures" target="_blank">New York, San Francisco, Dallas & India</a></p>
+                        <p><i class="bi bi-telephone-fill"></i><a href="tel:+17326662468">+1 732 666 2468</a></p>
+                        <p><i class="bi bi-envelope-fill"></i><a href="mailto:syammada@vimtra.com">syammada@vimtra.com</a></p>
+                    </div>
+                </div>
+                 <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <h5>Our Vision</h5>
+                     <p>To be a global leader in investment and development—reshaping industries, redefining urban landscapes, and driving the next wave of technological and economic progress.</p>
+                </div>
+            </div>
+            <div class="row footer-bottom-bar">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Vimtra Ventures. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const formStatus = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // IMPORTANT: PASTE YOUR WEB APP URL HERE
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwJqccrtvhmKfdqjqRhNhgiRfea9scY5ukbJ7rYimUAIOK6Xm0RQM_U6VTMQUQbPUla3w/exec';
+            
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            submitButton.disabled = true;
+            formStatus.innerHTML = '<div class="alert alert-info">Submitting...</div>';
+
+            try {
+                const response = await fetch(scriptURL, { method: 'POST', body: formData });
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`Network response error: ${response.status} ${response.statusText}. Details: ${errorText}`);
+                }
+
+                const data = await response.json();
+
+                if (data.result === 'success') {
+                    formStatus.innerHTML = '<div class="alert alert-success">Thank you! Your message has been sent.</div>';
+                    form.reset();
+                } else {
+                    const scriptError = (typeof data.error === 'object') ? JSON.stringify(data.error) : data.error;
+                    throw new Error(scriptError || 'The script reported an unknown error.');
+                }
+            } catch (error) {
+                console.error('Form Submission Error!', error);
+                
+                let errorMessage = error.message;
+                if (errorMessage.includes('{"name":"Exception"}')) {
+                    errorMessage = `A server-side error occurred in the Google Apps Script. This is usually due to a setup issue. Please check the following in your Google Sheet and Apps Script project:
+                    <ul class="text-start mt-2">
+                        <li><strong>Deployment:</strong> Is the script deployed as a Web App with access set to "Anyone"?</li>
+                        <li><strong>Permissions:</strong> Have you authorized all required permissions for the script to run?</li>
+                        <li><strong>Sheet Name:</strong> Does the sheet name in the script ('Sheet1') exactly match your sheet tab name (it's case-sensitive)?</li>
+                        <li><strong>Headers:</strong> Do the headers in your sheet exactly match the form field names (e.g., 'FirstName', 'LastName', 'Phone')?</li>
+                    </ul>`;
+                }
+                
+                formStatus.innerHTML = `<div class="alert alert-danger" style="text-align: left; word-break: break-all;"><strong>Error:</strong> ${errorMessage}</div>`;
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Infrastructure Development & Real Estate | Vimtra Ventures</title>
+    <meta
+      name="description"
+      content="Vimtra Ventures leads in infrastructure development with over $450 million in projects across the US and India, including luxury golf communities and multifamily complexes."
+    />
+    <meta
+      name="keywords"
+      content="infrastructure development, real estate investment, commercial real estate, multifamily apartments, golf communities, Vimtra Ventures, global projects"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Vimtra Ventures",
+            "url": "https://vimtra.com",
+            "logo": "https://vimtra.com/images/logo.png",
+            "description": "Vimtra Ventures is a global private equity and venture capital firm specializing in high-stakes corporate finance, mergers & acquisitions, and strategic development.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "New York, San Francisco, Dallas & India"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1 732 666 2468",
+              "email": "syammada@vimtra.com",
+              "contactType": "customer service"
+            },
+            "sameAs": [
+              "https://www.instagram.com/vimtra_ventures/",
+              "https://www.facebook.com/profile.php/?id=100078611386991",
+              "https://www.linkedin.com/company/vimtra-ventures/"
+            ]
+          },
+          {
+            "@type": "WebPage",
+            "name": "Infrastructure Development & Real Estate | Vimtra Ventures",
+            "description": "Vimtra Ventures leads in infrastructure development with over $450 million in projects across the US and India, including luxury golf communities and multifamily complexes.",
+            "url": "https://vimtra.com/infrastructuredevelopment.html",
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://vimtra.com/index.html"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Infrastructure Development",
+                  "item": "https://vimtra.com/infrastructuredevelopment.html"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    </script>
+
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate On Scroll) Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <style>
+      /* Shared Custom Styles */
+      :root {
+        --primary-red: #c00000;
+        --dark-grey: #343a40;
+        --mid-grey: #6c757d;
+        --light-grey: #f8f9fa;
+        --white: #ffffff;
+        --silver: #cdd7d8; /* New Silver Color */
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--white);
+        color: var(--dark-grey);
+        overflow-x: hidden; /* Important for AOS to prevent horizontal scrollbars */
+      }
+
+      .navbar {
+        transition: all 0.3s ease-in-out;
+        padding: 1rem 0;
+      }
+
+      .navbar-brand img {
+        max-height: 60px; /* Adjust logo height */
+      }
+
+      .nav-link {
+        font-weight: 600;
+        transition: color 0.3s;
+        color: var(--dark-grey);
+        margin: 0 10px;
+      }
+
+      .nav-link.active {
+        color: var(--primary-red);
+      }
+      .nav-link:hover {
+        color: var(--primary-red);
+        box-shadow: 0 2px 0 var(--primary-red);
+        transition: box-shadow 0.5s ease-in-out;
+      }
+
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      /* MEGA MENU CUSTOM STYLES */
+      /* Remove dropdown arrow */
+      .navbar .dropdown-toggle::after {
+        display: none;
+      }
+
+      .navbar-toggler {
+        border: none;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+
+      /* STYLIZED MEGA MENU STYLES */
+      /* STYLIZED MEGA MENU STYLES */
+      .mega-menu {
+        position: absolute;
+        width: 600%;
+        /* height: 1000%; */
+        left: -200%;
+        /* right: 0; */
+        top: 100%;
+        background-color: var(--white);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        border-top: 3px solid var(--primary-red);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transform: translateX(-10%);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        z-index: 1000;
+        padding: 40px 0;
+      }
+
+      .nav-item.dropdown:hover .mega-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .mega-menu-grid {
+        display: grid;
+        /* Updated to create 3 columns on desktop */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .mega-menu-item {
+        position: relative;
+        height: 250px;
+        width: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        color: var(--white);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        /* Initial state for fade-up animation */
+        opacity: 0;
+        transform: translateY(20px);
+        /* Updated transition to include opacity */
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          opacity 0.4s ease;
+      }
+
+      .mega-menu-item:hover {
+        transform: translateY(0) scale(1.05);
+      }
+
+      .nav-item.dropdown:hover .mega-menu .mega-menu-item {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(1) {
+        transition-delay: 0s;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(0, 0, 0, 0.1) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+      .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(2) {
+        transition-delay: 0.05s;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(0, 0, 0, 0.1) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+      .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(3) {
+        transition-delay: 0.1s;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(0, 0, 0, 0.1) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+      .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(4) {
+        transition-delay: 0.15s;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          rgba(0, 0, 0, 0.1) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+      /* .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(5) { transition-delay: 0.2s; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%); } */
+      /* .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(6) { transition-delay: 0.25s; background: none !important;} */
+
+      .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(5)::after {
+        background: none !important;
+      }
+      .mega-menu-item::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.95) 0%,
+          rgba(0, 0, 0, 0.2) 60%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        transition: background 0.4s ease;
+      }
+
+      .mega-menu-item:not(.mega-menu-animation-container):hover::after {
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.95) 0%,
+          rgba(0, 0, 0, 0.2) 60%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
+
+      .mega-menu-item-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        z-index: 2;
+      }
+
+      .mega-menu-item-content h5 {
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .mega-menu-item-content .btn-learn-more {
+        opacity: 0;
+        transform: translateY(15px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+
+      .mega-menu-item:hover .mega-menu-item-content .btn-learn-more {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .mega-menu-item-content p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        transition-delay: 0.1s;
+      }
+
+      .btn-learn-more {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--white);
+        text-decoration: none;
+        padding: 6px 14px;
+        background-color: var(--primary-red);
+        border-radius: 50px;
+        transition: background-color 0.3s, transform 0.3s;
+        transition-delay: 0.2s;
+        display: inline-block;
+      }
+
+      .btn-learn-more:hover {
+        background-color: #a00000;
+        transform: scale(1.05);
+      }
+
+      /* NEW: Mega Menu Animation Styles */
+      .mega-menu-animation-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light-grey);
+        box-shadow: none;
+      }
+
+      .shape-animation-wrapper {
+        width: 100px;
+        height: 100px;
+      }
+
+      .shape-animation-wrapper svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+      }
+
+      .shape {
+        opacity: 0;
+        transform-origin: 50% 50%;
+      }
+
+      .shape-circle {
+        animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        animation-delay: 0s;
+      }
+      .shape-square {
+        animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        animation-delay: 3s;
+      }
+      .shape-triangle {
+        animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        animation-delay: 6s;
+      }
+
+      @keyframes shape-loop {
+        0% {
+          opacity: 0;
+          transform: scale(0.5) rotate(0deg);
+        }
+        10% {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
+        23% {
+          opacity: 1;
+          transform: scale(1) rotate(90deg);
+        }
+        33% {
+          opacity: 0;
+          transform: scale(0.5) rotate(90deg);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+      }
+
+      @media (max-width: 1199.98px) and (min-width: 992px) {
+        .mega-menu-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .mega-menu {
+          display: none !important;
+        }
+        .nav-item.dropdown .dropdown-menu {
+          position: static;
+          width: 100%;
+          box-shadow: none;
+          border: none;
+          margin-top: 0;
+          border-radius: 0;
+        }
+        .nav-item.dropdown .dropdown-menu .dropdown-item {
+          padding: 10px 20px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .nav-item.dropdown .dropdown-menu {
+          display: none !important;
+        }
+        .nav-item.dropdown:hover .mega-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        font-weight: 700;
+        font-size: 2.5rem;
+        position: relative;
+        color: var(--dark-grey);
+      }
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: var(--primary-red);
+        margin: 15px auto 0;
+        border-radius: 2px;
+      }
+
+      /* Page-Specific Styles */
+      .page-hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url("images/infrastructure-development.jpg") no-repeat center center;
+        background-size: cover;
+        color: var(--white);
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .page-hero-section h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .stats-bar {
+        background-color: var(--primary-red);
+        color: var(--white);
+        padding: 40px 0;
+      }
+
+      .stat-item h2 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      .stat-item p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      .project-card {
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        min-height: 300px;
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        display: flex;
+        align-items: flex-end;
+        transition: transform 0.4s ease;
+      }
+
+      .project-card:hover {
+        transform: scale(1.05);
+      }
+
+      .project-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0)
+        );
+      }
+
+      .project-card-content {
+        position: relative;
+        z-index: 2;
+        padding: 25px;
+      }
+
+      .project-card-content h4 {
+        font-weight: 600;
+      }
+
+      .project-card-content a {
+        color: var(--white);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .philosophy-card {
+        text-align: center;
+      }
+
+      .philosophy-card .icon {
+        font-size: 3rem;
+        color: var(--primary-red);
+        margin-bottom: 20px;
+      }
+
+      .philosophy-card h4 {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .contact-cta {
+        background-color: var(--dark-grey);
+        color: var(--white);
+        border-radius: 15px;
+      }
+
+      .contact-cta a {
+        color: var(--primary-red);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .contact-cta a:hover {
+        text-decoration: underline;
+      }
+
+      /* Custom Modal Styles */
+      .custom-modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        z-index: 1050;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .custom-modal-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .custom-modal-content {
+        position: relative;
+        width: 90%;
+        max-width: 1000px;
+        height: 85vh;
+        max-height: 600px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+
+      .custom-modal-backdrop.active .custom-modal-content {
+        transform: scale(1);
+      }
+
+      .custom-modal-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.7) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        border-radius: 20px;
+      }
+
+      .custom-modal-details {
+        position: relative;
+        z-index: 2;
+        color: var(--white);
+        max-width: 50%;
+      }
+
+      .custom-modal-details h2 {
+        font-weight: 700;
+        color: var(--white);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      }
+
+      .custom-modal-details h2.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .custom-modal-details ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+
+      .custom-modal-details li {
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      }
+
+      .custom-modal-details li.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .custom-modal-details strong {
+        color: var(--light-grey);
+        opacity: 0.8;
+      }
+
+      .custom-modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2.5rem;
+        color: var(--white);
+        cursor: pointer;
+        z-index: 3;
+        line-height: 1;
+        transition: transform 0.3s;
+      }
+
+      .custom-modal-close:hover {
+        transform: scale(1.2);
+      }
+
+      /* NEW: Modal Button Style */
+      .modal-project-button {
+        display: inline-block;
+        background-color: var(--primary-red);
+        color: var(--white);
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 2rem;
+        transition: background-color 0.3s, transform 0.3s;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .modal-project-button:hover {
+        background-color: #a00000;
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      .modal-project-button.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      }
+
+      /* NEW FOOTER STYLES */
+      .site-footer {
+        background-color: var(--dark-grey);
+        color: var(--light-grey);
+        padding: 60px 0;
+        font-size: 0.9rem;
+      }
+      .site-footer h5 {
+        color: var(--white);
+        font-weight: 600;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px; /* Space for the line */
+      }
+      /* THE FIX IS HERE: Red accent line for headings */
+      .site-footer h5::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 30px; /* Width of the line */
+        height: 3px; /* Thickness of the line */
+        background-color: var(--primary-red);
+        border-radius: 2px;
+      }
+      .site-footer .footer-logo img {
+        max-height: 70px;
+        margin-bottom: 20px;
+      }
+      .site-footer p {
+        color: var(--light-grey);
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+      .footer-links a {
+        color: var(--light-grey);
+        text-decoration: none;
+        transition: color 0.3s, padding-left 0.3s;
+      }
+      .footer-links a:hover {
+        color: var(--primary-red);
+        padding-left: 5px;
+      }
+      .footer-contact p {
+        margin-bottom: 15px;
+      }
+      .footer-contact a {
+        color: var(--light-grey);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .footer-contact a:hover {
+        color: var(--primary-red);
+      }
+      .footer-contact i {
+        color: var(--primary-red);
+        margin-right: 10px;
+      }
+      .footer-social-icons a {
+        color: var(--mid-grey);
+        font-size: 1.5rem;
+        margin-right: 15px;
+        transition: color 0.3s;
+      }
+      .footer-social-icons a:hover {
+        color: var(--primary-red);
+      }
+      .footer-bottom-bar {
+        border-top: 1px solid #495057;
+        padding-top: 20px;
+        margin-top: 40px;
+        font-size: 0.8rem;
+        color: var(--mid-grey);
+      }
+      .footer-bottom-bar a {
+        color: var(--white);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .footer-bottom-bar a:hover {
+        color: var(--primary-red);
+      }
+      @media screen and (max-width: 860px) {
+        .page-hero-section h1 {
+          font-size: 2.5rem;
+        }
+        .navbar-nav .nav-item {
+          width: 394px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/logo.png" alt="Vimtra Ventures Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mergers&acquisitions.html"
+                >Mergers & Acquisitions</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="privateequity.html">Private Equity</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="portfolio.html"
+                id="ourPortfolioDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Our Portfolio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="ourPortfolioDropdown">
+                <li>
+                  <a class="dropdown-item" href="it-portfolio.html">IT</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="retails-portfolio.html"
+                    >Retails</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="healthcare-portfolio.html"
+                    >Healthcare</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="golfcommunities-portfolio.html"
+                    >Sports Franchises & Entertainment</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="hospitality-portfolio.html"
+                    >Hospitality Industry</a
+                  >
+                </li>
+              </ul>
+              <div class="mega-menu" aria-labelledby="ourPortfolioDropdown">
+                <div class="container">
+                  <div class="mega-menu-grid">
+                    <a
+                      href="it-portfolio.html"
+                      class="mega-menu-item"
+                      style="
+                        background-image: url('images/3409297.jpg');
+                        background-size: contain;
+                        background-position: center;
+                      "
+                    >
+                      <div class="mega-menu-item-content">
+                        <h5>Information Technology</h5>
+                        <p>
+                          Strategic investments in cutting-edge tech and
+                          software companies.
+                        </p>
+                        <span class="btn-learn-more">Learn More</span>
+                      </div>
+                    </a>
+                    <a
+                      href="retails-portfolio.html"
+                      class="mega-menu-item"
+                      style="
+                        background-image: url('images/ice-cream-cones-with-chocolate-kiwi-table.jpg');
+                        background-size: contain;
+                        background-position: center;
+                      "
+                    >
+                      <div class="mega-menu-item-content">
+                        <h5>Retail Ventures</h5>
+                        <p>
+                          Empowering innovative retail brands and consumer
+                          experiences.
+                        </p>
+                        <span class="btn-learn-more">Learn More</span>
+                      </div>
+                    </a>
+                    <a
+                      href="healthcare-portfolio.html"
+                      class="mega-menu-item"
+                      style="
+                        background-image: url('images/clipboard-medical-desk.jpg');
+                        background-size: contain;
+                        background-position: center;
+                      "
+                    >
+                      <div class="mega-menu-item-content">
+                        <h5>Healthcare</h5>
+                        <p>
+                          Funding advancements in medical technology and
+                          healthcare services.
+                        </p>
+                        <span class="btn-learn-more">Learn More</span>
+                      </div>
+                    </a>
+                    <a
+                      href="golfcommunities-portfolio.html"
+                      class="mega-menu-item"
+                      style="
+                        background-image: url('./images/Sports\ Franchise\ and\ Entertainment.jpg');
+                        background-size: auto;
+                        background-position: center;
+                      "
+                    >
+                      <div class="mega-menu-item-content">
+                        <h5>Sports Franchises & Entertainment</h5>
+                        <p>golf-centric and soccer properties</p>
+                        <span class="btn-learn-more">Learn More</span>
+                      </div>
+                    </a>
+                    <!-- <a href="hospitality-portfolio.html" class="mega-menu-item" style="background-image: url('images/hospitality-link.jpg'); background-size: contain; background-position: center;">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Hospitality Industry</h5>
+                                            <p>Investing in exceptional hotels, resorts, and entertainment venues.</p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a> -->
+                    <!-- NEW Animation Container -->
+                    <div class="mega-menu-item mega-menu-animation-container">
+                      <div class="shape-animation-wrapper">
+                        <svg viewBox="0 0 100 100">
+                          <circle
+                            class="shape shape-circle"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            fill="rgba(192, 0, 0, 0.2)"
+                          />
+                          <rect
+                            class="shape shape-square"
+                            x="10"
+                            y="10"
+                            width="80"
+                            height="80"
+                            fill="rgba(45, 55, 72, 0.2)"
+                          />
+                          <polygon
+                            class="shape shape-triangle"
+                            points="50,10 90,90 10,90"
+                            fill="rgba(108, 117, 125, 0.2)"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="infrastructuredevelopment.html"
+                >Infrastructure Development</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="teams.html">Teams</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero-section">
+      <div class="container">
+        <h1 class="display-3" data-aos="fade-up">Infrastructure Development</h1>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-6" data-aos="fade-up">
+            <div class="stat-item">
+              <h2>$650M+</h2>
+              <p>In Projects Under Active Development</p>
+            </div>
+          </div>
+          <div
+            class="col-md-6 mt-4 mt-md-0"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="stat-item">
+              <h2>35+</h2>
+              <p>Properties in the USA and India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Our Projects</h2>
+        <div class="row g-5">
+          <!-- USA PROJECTS -->
+          <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="mb-4">USA</h3>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                <div
+                  class="project-card"
+                  style="background-image: url('images/The-Bays.webp')"
+                >
+                  <div class="project-card-content">
+                    <h4>The Bays – Golf Lab & Suites</h4>
+                    <p class="mb-1 small">Frisco, Texas</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="https://tmbays.com/"
+                      data-project-image="images/The-Bays.webp"
+                      data-project-title="The Bays – Golf Lab & Suites"
+                      data-project-details='{"Concept": "High-end golf experience with 24 boutique hotel rooms, private hitting bays, and a 25,000 sqft putting green.", "Key Features": "Partnership with TaylorMade, premium dining, immersive golf technology, and panoramic PGA course views.", "Strategic Partners": "The Beck Group, Akkadia, ClayMoore Engineering, Hospitality Alliance.", "Project Size": "$91 million.", "Status": "Partner agreements executed; development in advanced stages."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div
+                  class="project-card"
+                  style="
+                    background-image: url('images/Lafayette-Hills-Estates.webp');
+                  "
+                >
+                  <div class="project-card-content">
+                    <h4>Lafayette Hills Estates</h4>
+                    <p class="mb-1 small">Lafayette, New York</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="https://clubandresortbusiness.com/100m-development-aims-to-transform-former-club-into-master-planned-golf-community/"
+                      data-project-image="images/Lafayette-Hills-Estates.webp"
+                      data-project-title="Lafayette Hills Estates & Country Club Redevelopment"
+                      data-project-details='{"Concept": "Redevelopment of a 160-acre country club into a lifestyle community with 260 homes, a 9-hole golf course, bike paths, lakes, and amenities.", "Model": "Rent-to-own housing model for incoming Micron workforce.", "Project Size": "$100+ million.", "Status": "Planning and approvals underway."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div
+                  class="project-card"
+                  style="
+                    background-image: url('images/Dalton\ 100\ @\ NoDa.webp');
+                  "
+                >
+                  <div class="project-card-content">
+                    <h4>Dalton 100 @ NoDa</h4>
+                    <p class="mb-1 small">Charlotte, North Carolina</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="dalton-100-project.html"
+                      data-project-image="https://summitsquareeb5.us/The%20dalton%20avenue.html"
+                      data-project-title="Dalton 100 @ NoDa"
+                      data-project-details='{"Concept": "275-unit, 7-story Class A mid-rise in Charlotte’s premier arts district.", "Location": "Located near LYNX Blue Line, boutique shopping, breweries, and dining.", "Project Size": "$80 million.", "Status": "Site assembly completed; pre-development underway."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="zoom-in"
+                data-aos-delay="0"
+              >
+                <div
+                  class="project-card"
+                  style="
+                    background-image: url('images/Hockley\ Residential.webp');
+                  "
+                >
+                  <div class="project-card-content">
+                    <h4>Hockley Residential</h4>
+                    <p class="mb-1 small">Hockley, Texas</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="https://www.hockleycollection.com/home"
+                      data-project-image="images/Hockley\ Residential.webp"
+                      data-project-title="Hockley Residential Development"
+                      data-project-details='{"Concept": "547 acres entitled for 1,250+ residential lots near Houston.", "Project Size": "$70 million.", "Status": "Entitlements and infrastructure planning underway."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div
+                  class="project-card"
+                  style="
+                    background-image: url('https://placehold.co/400x300/c00000/FFFFFF?text=Cross+Roads');
+                  "
+                >
+                  <div class="project-card-content">
+                    <h4>Cross Roads Residential</h4>
+                    <p class="mb-1 small">Cross Roads, Texas</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="https://www.crossroadsrtc.com/programs/short-term-residential/"
+                      data-project-image="https://placehold.co/800x600/c00000/FFFFFF?text=Cross+Roads"
+                      data-project-title="Cross Roads Residential Development"
+                      data-project-details='{"Concept": "60 acres entitled for 42 residential lots.", "Project Size": "$15 million.", "Status": "Entitlement and development planning underway."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div
+                  class="project-card"
+                  style="
+                    background-image: url('https://placehold.co/400x300/343a40/FFFFFF?text=Fort+Pierce');
+                  "
+                >
+                  <div class="project-card-content">
+                    <h4>Fort Pierce Land</h4>
+                    <p class="mb-1 small">Fort Pierce, Florida</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="fort-pierce-project.html"
+                      data-project-image="https://placehold.co/800x600/343a40/FFFFFF?text=Fort+Pierce"
+                      data-project-title="Fort Pierce Land Development"
+                      data-project-details='{"Concept": "300 acres subdivided into 47 five-acre parcels.", "Project Size": "$12.5 million.", "Status": "Land division planning in progress."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="zoom-in"
+                data-aos-delay="0"
+              >
+                <div
+                  class="project-card"
+                  style="
+                    background-image: url('https://placehold.co/400x300/6c757d/FFFFFF?text=Perris+Master');
+                  "
+                >
+                  <div class="project-card-content">
+                    <h4>Perris Master Development</h4>
+                    <p class="mb-1 small">Perris, California</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="perris-master-project.html"
+                      data-project-image="https://placehold.co/800x600/6c757d/FFFFFF?text=Perris+Master"
+                      data-project-title="Perris Master Development"
+                      data-project-details='{"Concept": "1,450 acres with an appraised value of $34 million. Planned as a mixed-use town center with residential, retail, commercial, and entertainment.", "Project Size": "$34 million.", "Status": "Master planning phase."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div
+                  class="project-card"
+                  style="background-image: url('images/the-summit-melissa.png')"
+                >
+                  <div class="project-card-content">
+                    <h4>The Summit @ Melissa Crossing</h4>
+                    <p class="mb-1 small">Melissa, Texas</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="the-summit-project.html"
+                      data-project-image="images/the-summit-melissa.png"
+                      data-project-title="The Summit @ Melissa Crossing & I-75 Retail Development"
+                      data-project-details='{"Concept": "Mixed-use project with retail frontage along I-75 and residential components.", "Project Size": "$30 million.", "Status": "Planning, entitlement, and pre-leasing phases."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                               <div class="project-card" style="background-image: url('images/rdu-center.png');">
+                                   <div class="project-card-content">
+                                       <h4>North Texas Healthcare</h4>
+                                       <p class="mb-1 small">North Texas</p>
+                                       <a href="#" class="open-project-modal" data-project-url="north-texas-healthcare-project.html" data-project-image="https://placehold.co/800x600/343a40/FFFFFF?text=Healthcare" data-project-title="North Texas Healthcare Expansion – ER & Urgent Care Centers" data-project-details='{"Concept": "Development of over 20 emergency and urgent care centers strategically located across North Texas.", "Focus": "Addressing growing healthcare needs with state-of-the-art facilities and rapid access to medical services.", "Project Size": "$130 million.", "Timeline": "2025–2030 rollout.", "Status": "Planning, site selection, and phased development preparation in progress."}'>Learn More &rarr;</a>
+                                   </div>
+                               </div>
+                           </div> -->
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="zoom-in"
+                data-aos-delay="0"
+              >
+                <div
+                  class="project-card"
+                  style="background-image: url('images/bonito-lakes.jpg')"
+                >
+                  <div class="project-card-content">
+                    <h4>Bonito Lakes</h4>
+                    <p class="mb-1 small">Celina, Texas</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="bonito-lakes-project.html"
+                      data-project-image="images/bonito-lakes.jpg"
+                      data-project-title="Bonito Lakes – Luxury Development"
+                      data-project-details='{"Concept": "100-acre exclusive lakeside community featuring custom estates valued at $3M+ each.", "Location": "Located in one of America’s fastest-growing cities, designed for luxury living with expansive waterfront views and private amenities.", "Project Size": "$180 million.", "Status": "Master planning and pre-development underway."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                               <div class="project-card" style="background-image: url('images/rdu-center.png');">
+                                   <div class="project-card-content">
+                                       <h4>RDU Center</h4>
+                                       <p class="mb-1 small">Morrisville, North Carolina</p>
+                                       <a href="#" class="open-project-modal" data-project-url="rdu-center-project.html" data-project-image="images/rdu-center.png" data-project-title="RDU Center" data-project-details='{"Concept": "Class A Office Building in the heart of Research Triangle Park (RTP).", "Key Features": "114,991 SF, 4 floors, 375+ parking spaces, on-site fitness center, electric car charging stations.", "Project Size": "$16.3 million acquisition.", "Status": "73% Occupied with strong tenant base."}'>Learn More &rarr;</a>
+                                   </div>
+                               </div>
+                           </div> -->
+            </div>
+          </div>
+          <!-- INDIA PROJECTS -->
+          <div class="col-12" data-aos="fade-up">
+            <h3 class="mb-4">India</h3>
+            <div class="row g-4">
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div
+                  class="project-card"
+                  style="background-image: url('images/arka-grand.png')"
+                >
+                  <div class="project-card-content">
+                    <h4>Arka Grand</h4>
+                    <p class="mb-1 small">Near Mahabalipuram</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="https://www.arkagrand.com/"
+                      data-project-image="images/arka-grand.png"
+                      data-project-title="Arka Grand"
+                      data-project-details='{"Location": "Near Mahabalipuram", "Details": "Further details about Arka Grand can be added here."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div
+                  class="project-card"
+                  style="background-image: url('images/the-windgrove.png')"
+                >
+                  <div class="project-card-content">
+                    <h4>The Windgrove</h4>
+                    <p class="mb-1 small">Kotagiri, Ooty, Tamilnadu</p>
+                    <a
+                      href="#"
+                      class="open-project-modal"
+                      data-project-url="https://thewindgrove.com/"
+                      data-project-image="images/the-windgrove.png"
+                      data-project-title="The Windgrove"
+                      data-project-details='{"Location": "Kotagiri, Ooty, Tamilnadu", "Details": "Further details about The Windgrove can be added here."}'
+                      >Learn More &rarr;</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="philosophy-card">
+              <div class="icon"><i class="bi bi-bullseye"></i></div>
+              <h4>Our Investment Philosophy</h4>
+              <p>
+                We believe in a disciplined, research-driven investment
+                approach, seeking opportunities that align with our core values
+                of integrity, innovation, and impact.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="philosophy-card">
+              <div class="icon"><i class="bi bi-patch-check-fill"></i></div>
+              <h4>Our Track Record</h4>
+              <p>
+                With a proven track record of successful investments and
+                transformative projects, we have built a reputation as a trusted
+                leader in the industry.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="philosophy-card">
+              <div class="icon"><i class="bi bi-binoculars-fill"></i></div>
+              <h4>Looking Ahead</h4>
+              <p>
+                As we expand our portfolio, we remain dedicated to fostering
+                innovation, unlocking value, and shaping the future of
+                investment and development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Footprint & Contact -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h2 class="section-title text-start ps-0">Global Footprint</h2>
+            <p>
+              We have a global presence with offices in New York, North
+              Carolina, Delaware, San Francisco Bay Area, Texas, Chennai, and
+              Hyderabad.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="contact-cta p-5">
+              <h3 class="mb-3">Contact Us</h3>
+              <p>
+                For partnership opportunities or to learn more about our firm,
+                please contact us.
+              </p>
+              <p class="mb-1">
+                <a href="mailto:syammada@vimtra.com">syammada@vimtra.com</a>
+              </p>
+              <p><a href="tel:+17326662468">+1 732 666 2468</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPDATED FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="footer-logo">
+              <img
+                src="images/logowhite.png"
+                alt="Vimtra Ventures Logo - White"
+              />
+            </div>
+            <p>
+              Vimtra Ventures is a global private equity and venture capital
+              firm specializing in high-stakes corporate finance, mergers &
+              acquisitions, and strategic development. With a diverse portfolio
+              spanning technology, retail, healthcare, real estate, and
+              hospitality, we partner with visionary enterprises to create
+              long-term value and transformative growth worldwide.
+            </p>
+            <div class="footer-social-icons mt-4">
+              <a
+                href="https://www.instagram.com/vimtra_ventures/"
+                aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/profile.php/?id=100078611386991"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/vimtra-ventures/"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li>
+                <a href="mergers&acquisitions.html">Mergers & Acquisitions</a>
+              </li>
+              <li><a href="privateequity.html">Private Equity</a></li>
+              <li>
+                <a href="infrastructuredevelopment.html">Infrastructure</a>
+              </li>
+              <li><a href="teams.html">Teams</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <h5>Contact Us</h5>
+            <div class="footer-contact">
+              <p>
+                <i class="bi bi-geo-alt-fill"></i
+                ><a
+                  href="https://www.google.com/maps/search/?api=1&query=Vimtra+Ventures"
+                  target="_blank"
+                  rel="noopener"
+                  >New York, San Francisco, Dallas & India</a
+                >
+              </p>
+              <p>
+                <i class="bi bi-telephone-fill"></i
+                ><a href="tel:+17326662468">+1 732 666 2468</a>
+              </p>
+              <p>
+                <i class="bi bi-envelope-fill"></i
+                ><a href="mailto:syammada@vimtra.com">syammada@vimtra.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <h5>Our Vision</h5>
+            <p>
+              To be a global leader in investment and development—reshaping
+              industries, redefining urban landscapes, and driving the next wave
+              of technological and economic progress.
+            </p>
+          </div>
+        </div>
+        <div class="row footer-bottom-bar">
+          <div class="col-md-6">
+            <p>&copy; 2025 Vimtra Ventures. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="me-3">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom Project Modal -->
+    <div class="custom-modal-backdrop" id="projectModalBackdrop">
+      <div class="custom-modal-content" id="projectModalContent">
+        <span class="custom-modal-close" id="projectModalClose">&times;</span>
+        <div class="custom-modal-details" id="projectModalDetails">
+          <!-- Project details will be injected here by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS (Animate On Scroll) Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize AOS
+        AOS.init({
+          duration: 800,
+          once: true,
+        });
+
+        // Custom Modal Logic
+        const modalBackdrop = document.getElementById("projectModalBackdrop");
+        const modalContent = document.getElementById("projectModalContent");
+        const modalDetailsContainer = document.getElementById(
+          "projectModalDetails"
+        );
+        const modalCloseButton = document.getElementById("projectModalClose");
+        const modalTriggers = document.querySelectorAll(".open-project-modal");
+
+        modalTriggers.forEach((button) => {
+          button.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Get project data from attributes
+            const title = this.getAttribute("data-project-title");
+            const details = JSON.parse(
+              this.getAttribute("data-project-details")
+            );
+            const image = this.getAttribute("data-project-image");
+            const projectUrl = this.getAttribute("data-project-url");
+
+            // Populate modal content
+            modalContent.style.backgroundImage = `url('${image}')`;
+
+            // THE FIX IS HERE: Create the button and add it to the HTML
+            let detailsHtml = `<h2 class="modal-detail-item">${title}</h2><ul>`;
+            for (const key in details) {
+              detailsHtml += `<li class="modal-detail-item"><strong>${key}:</strong> ${details[key]}</li>`;
+            }
+            detailsHtml += "</ul>";
+            // Add the dedicated button
+            detailsHtml += `<a href="${projectUrl}" target="_blank" rel="noopener" class="modal-project-button">View Project Details</a>`;
+
+            modalDetailsContainer.innerHTML = detailsHtml;
+
+            // Show the modal
+            modalBackdrop.classList.add("active");
+
+            // Animate the detail lines and the new button
+            const detailItems = modalDetailsContainer.querySelectorAll(
+              ".modal-detail-item, h2, .modal-project-button"
+            );
+            detailItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add("visible");
+              }, 200 + 150 * index);
+            });
+          });
+        });
+
+        // Function to close the modal
+        function closeModal() {
+          modalBackdrop.classList.remove("active");
+          // Reset animation states
+          const detailItems = modalDetailsContainer.querySelectorAll(
+            ".modal-detail-item, h2, .modal-project-button"
+          );
+          detailItems.forEach((item) => {
+            item.classList.remove("visible");
+          });
+        }
+
+        // Event listeners for closing the modal
+        modalCloseButton.addEventListener("click", closeModal);
+        modalBackdrop.addEventListener("click", function (event) {
+          if (event.target === modalBackdrop) {
+            closeModal();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
