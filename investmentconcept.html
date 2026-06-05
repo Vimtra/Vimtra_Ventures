@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Investment Concept | Vimtra Ventures</title>
+    <meta name="description"
+        content="Vimtra Ventures Investment Concept: Capital-preserving strategies across real assets and technology, with selective exposure to growth through applied AI.">
+    <meta name="keywords"
+        content="investment concept, capital preservation, real estate, AI ventures, private credit, Vimtra Ventures">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Vimtra Ventures",
+          "url": "https://vimtra.com",
+          "logo": "https://vimtra.com/images/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Investment Concept | Vimtra Ventures",
+          "description": "Vimtra Ventures Investment Concept: Capital-preserving strategies across real assets and technology.",
+          "url": "https://vimtra.com/investmentconcept.html",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://vimtra.com/index.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Investment Concept",
+                "item": "https://vimtra.com/investmentconcept.html"
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+    <link rel="canonical" href="https://vimtra.com/investmentconcept.html">
+    <meta property="og:title" content="Investment Concept | Vimtra Ventures">
+    <meta property="og:description"
+        content="Capital-preserving strategies across real assets and technology, with selective exposure to growth through applied AI.">
+    <meta property="og:image" content="https://vimtra.com/images/logo.png">
+    <meta property="og:url" content="https://vimtra.com/investmentconcept.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* Shared Custom Styles */
+        :root {
+            --primary-red: #c00000;
+            --dark-grey: #343a40;
+            --mid-grey: #6c757d;
+            --light-grey: #f8f9fa;
+            --white: #ffffff;
+            --silver: #cdd7d8;
+            --overlay-dark: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--dark-grey);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        /* NEW: Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.75s ease-out;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            max-height: 80px;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: var(--primary-red);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .navbar {
+            transition: all 0.3s ease-in-out;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand img {
+            max-height: 60px;
+            /* Adjust logo height */
+        }
+
+        .nav-link {
+            font-weight: 600;
+            transition: color 0.3s;
+            color: var(--dark-grey);
+            margin: 0 10px;
+        }
+
+        .nav-link.active {
+            color: var(--primary-red);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-red);
+            box-shadow: 0 2px 0 var(--primary-red);
+            transition: box-shadow 0.5s ease-in-out;
+        }
+
+        /* Remove dropdown arrow */
+        .navbar .dropdown-toggle::after {
+            display: none;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* STYLIZED MEGA MENU STYLES */
+        /* STYLIZED MEGA MENU STYLES */
+        .mega-menu {
+            position: absolute;
+            width: 600%;
+            /* height: 1000%; */
+            left: -200%;
+            /* right: 0; */
+            top: 100%;
+            background-color: var(--white);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            border-top: 3px solid var(--primary-red);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transform: translateX(-10%);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+            z-index: 1000;
+            padding: 40px 0;
+        }
+
+        .nav-item.dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-menu-grid {
+            display: grid;
+            /* Updated to create 3 columns on desktop */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .mega-menu-item {
+            position: relative;
+            height: 250px;
+            width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            /* background-size: contain;
+            background-position: center; */
+            color: var(--white);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            /* Initial state for fade-up animation */
+            opacity: 0;
+            transform: translateY(20px);
+            /* Updated transition to include opacity */
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.4s ease;
+        }
+
+        .mega-menu-item:hover {
+            transform: translateY(0) scale(1.05);
+        }
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(1) {
+            transition-delay: 0s;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.1) 50%,
+                    rgba(0, 0, 0, 0) 100%);
+        }
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(2) {
+            transition-delay: 0.05s;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.1) 50%,
+                    rgba(0, 0, 0, 0) 100%);
+        }
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(3) {
+            transition-delay: 0.1s;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.1) 50%,
+                    rgba(0, 0, 0, 0) 100%);
+        }
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(4) {
+            transition-delay: 0.15s;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.9) 0%,
+                    rgba(0, 0, 0, 0.1) 50%,
+                    rgba(0, 0, 0, 0) 100%);
+        }
+
+        /* .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(5) { transition-delay: 0.2s; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%); } */
+        /* .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(6) { transition-delay: 0.25s; background: none !important;} */
+
+        .nav-item.dropdown:hover .mega-menu .mega-menu-item:nth-child(5)::after {
+            background: none !important;
+        }
+
+        .mega-menu-item::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.95) 0%,
+                    rgba(0, 0, 0, 0.2) 60%,
+                    rgba(0, 0, 0, 0) 100%);
+            transition: background 0.4s ease;
+        }
+
+        .mega-menu-item:not(.mega-menu-animation-container):hover::after {
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.95) 0%,
+                    rgba(0, 0, 0, 0.2) 60%,
+                    rgba(0, 0, 0, 0) 100%);
+        }
+
+        .mega-menu-item-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            z-index: 2;
+        }
+
+        .mega-menu-item-content h5 {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .mega-menu-item-content .btn-learn-more {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .mega-menu-item:hover .mega-menu-item-content .btn-learn-more {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mega-menu-item-content p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            transition-delay: 0.1s;
+        }
+
+        .btn-learn-more {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            padding: 6px 14px;
+            background-color: var(--primary-red);
+            border-radius: 50px;
+            transition: background-color 0.3s, transform 0.3s;
+            transition-delay: 0.2s;
+            display: inline-block;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #a00000;
+            transform: scale(1.05);
+        }
+
+        /* NEW: Mega Menu Animation Styles */
+        .mega-menu-animation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--light-grey);
+            box-shadow: none;
+        }
+
+        .shape-animation-wrapper {
+            width: 100px;
+            height: 100px;
+        }
+
+        .shape-animation-wrapper svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .shape {
+            opacity: 0;
+            transform-origin: 50% 50%;
+        }
+
+        .shape-circle {
+            animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            animation-delay: 0s;
+        }
+
+        .shape-square {
+            animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            animation-delay: 3s;
+        }
+
+        .shape-triangle {
+            animation: shape-loop 9s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            animation-delay: 6s;
+        }
+
+        @keyframes shape-loop {
+            0% {
+                opacity: 0;
+                transform: scale(0.5) rotate(0deg);
+            }
+
+            10% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+
+            23% {
+                opacity: 1;
+                transform: scale(1) rotate(90deg);
+            }
+
+            33% {
+                opacity: 0;
+                transform: scale(0.5) rotate(90deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+
+        @media (max-width: 1199.98px) and (min-width: 992px) {
+            .mega-menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .mega-menu {
+                display: none !important;
+            }
+
+            .nav-item.dropdown .dropdown-menu {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                border: none;
+                margin-top: 0;
+                border-radius: 0;
+            }
+
+            .nav-item.dropdown .dropdown-menu .dropdown-item {
+                padding: 10px 20px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown .dropdown-menu {
+                display: none !important;
+            }
+
+            .nav-item.dropdown:hover .mega-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Investment Concept Specific Styles --- */
+
+        /* Hero Section */
+        .page-hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/investment-concept.png') no-repeat center center;
+            background-size: cover;
+            color: var(--white);
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            opacity: 0;
+            animation: fadeUp 1s ease-out forwards;
+        }
+
+        .page-hero-section h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .page-hero-section h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Overview Section */
+        .overview-section {
+            padding: 100px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .lead-text {
+            font-size: 1.35rem;
+            line-height: 2;
+            color: var(--mid-grey);
+            max-width: 900px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* Core Strategies - Premium Grid */
+        .strategies-section {
+            padding-bottom: 100px;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            /* Seamless grid */
+        }
+
+        .strategy-item {
+            position: relative;
+            height: 500px;
+            /* Tall, immersive panels */
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .strategy-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.8s ease;
+        }
+
+        .strategy-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.1) 100%);
+            opacity: 0.8;
+            transition: opacity 0.5s ease;
+        }
+
+        .strategy-content {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            right: 40px;
+            color: var(--white);
+            z-index: 2;
+            transform: translateY(60px);
+            /* Initially hide description */
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .strategy-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .strategy-title::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 3px;
+            background: var(--primary-red);
+            transition: width 0.4s ease;
+            margin-top: 10px;
+        }
+
+        .strategy-desc {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0;
+            transition: opacity 0.4s ease 0.1s;
+        }
+
+        /* Hover Effects */
+        .strategy-item:hover .strategy-bg {
+            transform: scale(1.08);
+            /* Subtle zoom */
+        }
+
+        .strategy-item:hover .strategy-overlay {
+            opacity: 0.9;
+        }
+
+        .strategy-item:hover .strategy-content {
+            transform: translateY(0);
+        }
+
+        .strategy-item:hover .strategy-desc {
+            opacity: 1;
+        }
+
+        .strategy-item:hover .strategy-title::after {
+            width: 100%;
+        }
+
+        /* Investment Philosophy - Icon Row */
+        .philosophy-section {
+            padding: 100px 0;
+            background-color: var(--light-grey);
+            text-align: center;
+        }
+
+        .philosophy-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .philosophy-item {
+            flex: 1;
+            min-width: 220px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .philosophy-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .philosophy-icon {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 25px;
+            background: var(--white);
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .philosophy-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .philosophy-text {
+            color: var(--mid-grey);
+            font-size: 0.9rem;
+        }
+
+        /* Split Section: Structure & Ideal Partners */
+        .split-section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .split-panel {
+            flex: 1;
+            padding: 80px 60px;
+            min-width: 350px;
+        }
+
+        .panel-dark {
+            background-color: var(--dark-grey);
+            color: var(--white);
+        }
+
+        .panel-light {
+            background-color: #e9ecef;
+            color: var(--dark-grey);
+        }
+
+        .panel-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .panel-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            text-align: justify;
+        }
+
+        /* Footer (Reused) */
+        .site-footer {
+            background-color: var(--dark-grey);
+            color: var(--light-grey);
+            padding: 60px 0;
+            font-size: 0.9rem;
+        }
+
+        .site-footer h5 {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .site-footer h5::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 3px;
+            background-color: var(--primary-red);
+            border-radius: 2px;
+        }
+
+        .site-footer .footer-logo img {
+            max-height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .site-footer p {
+            color: var(--light-grey);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--light-grey);
+            text-decoration: none;
+            transition: color 0.3s, padding-left 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+        }
+
+        .footer-contact a {
+            color: var(--light-grey);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: var(--primary-red);
+        }
+
+        .footer-contact i {
+            color: var(--primary-red);
+            margin-right: 10px;
+        }
+
+        .footer-social-icons a {
+            color: var(--mid-grey);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-social-icons a:hover {
+            color: var(--primary-red);
+        }
+
+        .footer-bottom-bar {
+            border-top: 1px solid #495057;
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: var(--mid-grey);
+        }
+
+        .footer-bottom-bar a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-bottom-bar a:hover {
+            color: var(--primary-red);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .strategy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .strategy-item {
+                height: 400px;
+            }
+
+            .page-hero-section h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Vimtra Ventures Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mergers&acquisitions.html">Mergers & Acquisitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privateequity.html">Private Equity</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="portfolio.html" id="ourPortfolioDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Portfolio
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="ourPortfolioDropdown">
+                            <li>
+                                <a class="dropdown-item" href="it-portfolio.html">IT</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="retails-portfolio.html">Retails</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="healthcare-portfolio.html">Healthcare</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="golfcommunities-portfolio.html">Sports Franchise and
+                                    Entertainment</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="hospitality-portfolio.html">Hospitality Industry</a>
+                            </li>
+                        </ul>
+                        <div class="mega-menu" aria-labelledby="ourPortfolioDropdown">
+                            <div class="container">
+                                <div class="mega-menu-grid">
+                                    <a href="it-portfolio.html" class="mega-menu-item" style="
+                        background-image: url('images/3409297.jpg');
+                        background-size: contain;
+                        background-position: center;
+                      ">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Information Technology</h5>
+                                            <p>
+                                                Strategic investments in cutting-edge tech and
+                                                software companies.
+                                            </p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <a href="retails-portfolio.html" class="mega-menu-item" style="
+                        background-image: url('images/ice-cream-cones-with-chocolate-kiwi-table.jpg');
+                        background-size: contain;
+                        background-position: center;
+                      ">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Retail Ventures</h5>
+                                            <p>
+                                                Empowering innovative retail brands and consumer
+                                                experiences.
+                                            </p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <a href="healthcare-portfolio.html" class="mega-menu-item" style="
+                        background-image: url('images/clipboard-medical-desk.jpg');
+                        background-size: contain;
+                        background-position: center;
+                      ">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Healthcare</h5>
+                                            <p>
+                                                Funding advancements in medical technology and
+                                                healthcare services.
+                                            </p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <a href="golfcommunities-portfolio.html" class="mega-menu-item" style="
+                        background-image: url('images/Sports\ Franchise\ and\ Entertainment.jpg');
+                        background-size: auto;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                      ">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Sports Franchise and Entertainment</h5>
+                                            <p>Golf-centric and Soccer properties.</p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a>
+                                    <!-- <a href="hospitality-portfolio.html" class="mega-menu-item" style="background-image: url('images/hospitality-link.jpg'); background-size: contain; background-position: center;">
+                                        <div class="mega-menu-item-content">
+                                            <h5>Hospitality Industry</h5>
+                                            <p>Investing in exceptional hotels, resorts, and entertainment venues.</p>
+                                            <span class="btn-learn-more">Learn More</span>
+                                        </div>
+                                    </a> -->
+                                    <!-- NEW Animation Container -->
+                                    <div class="mega-menu-item mega-menu-animation-container">
+                                        <div class="shape-animation-wrapper">
+                                            <svg viewBox="0 0 100 100">
+                                                <circle class="shape shape-circle" cx="50" cy="50" r="40"
+                                                    fill="rgba(192, 0, 0, 0.2)" />
+                                                <rect class="shape shape-square" x="10" y="10" width="80" height="80"
+                                                    fill="rgba(45, 55, 72, 0.2)" />
+                                                <polygon class="shape shape-triangle" points="50,10 90,90 10,90"
+                                                    fill="rgba(108, 117, 125, 0.2)" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="infrastructuredevelopment.html">Infrastructure Development</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="page-hero-section">
+        <div class="hero-content container">
+            <h1>Investment Concept</h1>
+            <h2>Capital Preservation & Growth</h2>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section class="overview-section">
+        <div class="container">
+            <h3 class="fw-bold mb-5 section-title"
+                style="color: var(--primary-red); position: relative; display: inline-block;">OVERVIEW
+                <span
+                    style="display: block; width: 60px; height: 3px; background: var(--dark-grey); margin: 10px auto;"></span>
+            </h3>
+            <p class="lead-text">
+                Vimtra Ventures has a global investment platform focused on capital-preserving strategies across real
+                assets and technology, with selective exposure to growth through applied AI. The platform is designed to
+                partner with long-term capital seeking disciplined structures, transparency, and downside protection.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Strategies Section (Interactive Grid) -->
+    <section class="strategies-section">
+        <div class="container-fluid p-0">
+            <div class="strategy-grid">
+                <!-- 1. U.S. Real Estate -->
+                <div class="strategy-item">
+                    <div class="strategy-bg" style="background-image: url('images/us-real-estate.png');">
+                    </div>
+                    <div class="strategy-overlay"></div>
+                    <div class="strategy-content">
+                        <div class="strategy-title">U.S. Real Estate</div>
+                        <div class="strategy-desc">Income-producing assets with durable cash flow and conservative
+                            leverage.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. London & Select Global Real Estate -->
+                <div class="strategy-item">
+                    <div class="strategy-bg" style="background-image: url('images/london-real-estate.png');"></div>
+                    <div class="strategy-overlay"></div>
+                    <div class="strategy-content">
+                        <div class="strategy-title">Global Real Estate</div>
+                        <div class="strategy-desc">Prime and near-prime assets positioned as long-term stores of value
+                            and currency diversification.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. AI & Technology Ventures -->
+                <div class="strategy-item">
+                    <div class="strategy-bg" style="background-image: url('images/ai-technology.png');"></div>
+                    <div class="strategy-overlay"></div>
+                    <div class="strategy-content">
+                        <div class="strategy-title">AI & Technology</div>
+                        <div class="strategy-desc">Applied AI, infrastructure, and enterprise use cases with clear
+                            commercial traction. Investing in the future of efficiency and innovation.</div>
+                    </div>
+                </div>
+
+                <!-- 4. Private Credit -->
+                <div class="strategy-item">
+                    <div class="strategy-bg" style="background-image: url('images/private-credit.png');"></div>
+                    <div class="strategy-overlay"></div>
+                    <div class="strategy-content">
+                        <div class="strategy-title">Private Credit</div>
+                        <div class="strategy-desc">Structured credit, bridge, and mezzanine opportunities to enhance
+                            risk-adjusted returns (Opportunistic).</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <h2 class="fw-bold mb-5">Investment Philosophy</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <div class="philosophy-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 class="philosophy-title">Capital Preservation</h4>
+                    <p class="philosophy-text">Our first priority is protecting capital through disciplined structures
+                        and risk mitigation.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                    <h4 class="philosophy-title">Asymmetric Upside</h4>
+                    <p class="philosophy-text">Seeking opportunities with limited downside risk and significant
+                        potential for growth, prioritizing value over speculation.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-icon"><i class="bi bi-building"></i></div>
+                    <h4 class="philosophy-title">Institutional Discipline</h4>
+                    <p class="philosophy-text">Combining rigorous institutional standards with entrepreneurial speed and
+                        execution.</p>
+                </div>
+                <div class="philosophy-item">
+                    <div class="philosophy-icon"><i class="bi bi-people-fill"></i></div>
+                    <h4 class="philosophy-title">Alignment</h4>
+                    <p class="philosophy-text">We align our interests through co-investment, ensuring we are partners in
+                        every transaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Structure & Ideal Partners (Split Panel) -->
+    <section class="split-section">
+        <div class="split-panel panel-dark">
+            <h3 class="panel-heading"><i class="bi bi-diagram-2 me-3"></i>Structure</h3>
+            <p class="panel-text">
+                Vimtra Ventures is being institutionalized into a fund structure complemented by deal-specific
+                co-investment opportunities. This hybrid approach allows our partners maximum flexibility and
+                selectivity, enabling them to tailor their exposure according to individual risk profiles and strategic
+                goals.
+            </p>
+        </div>
+        <div class="split-panel panel-light">
+            <h3 class="panel-heading" style="color: var(--primary-red);"><i class="bi bi-handshake me-3"></i>Ideal
+                Partners</h3>
+            <p class="panel-text">
+                We partner with family offices and long-term investors seeking transparent, cross-border exposure to
+                prime real assets and transformative technology. By adhering to a disciplined risk framework, we ensure
+                that every partnership is built on alignment, trust, and a shared commitment to sustainable value
+                creation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="footer-logo">
+                        <img src="images/logowhite.png" alt="Vimtra Ventures Logo - White" />
+                    </div>
+                    <p>
+                        Vimtra Ventures is a global private equity and venture capital
+                        firm specializing in high-stakes corporate finance, mergers &
+                        acquisitions, and strategic development. With a diverse portfolio
+                        spanning technology, retail, healthcare, real estate, and
+                        hospitality, we partner with visionary enterprises to create
+                        long-term value and transformative growth worldwide.
+                    </p>
+                    <div class="footer-social-icons mt-4">
+                        <a href="https://www.instagram.com/vimtra_ventures/" aria-label="Instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php/?id=100078611386991" aria-label="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/vimtra-ventures/" aria-label="LinkedIn"><i
+                                class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a href="mergers&acquisitions.html">Mergers & Acquisitions</a>
+                        </li>
+                        <li><a href="privateequity.html">Private Equity</a></li>
+                        <li>
+                            <a href="infrastructuredevelopment.html">Infrastructure</a>
+                        </li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <h5>Contact Us</h5>
+                    <div class="footer-contact">
+                        <p>
+                            <i class="bi bi-geo-alt-fill"></i><a
+                                href="https://www.google.com/maps/search/?api=1&query=Vimtra+Ventures"
+                                target="_blank">New York, San
+                                Francisco, Dallas & India</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill"></i><a href="tel:+17326662468">+1 732 666 2468</a>
+                        </p>
+                        <p>
+                            <i class="bi bi-envelope-fill"></i><a
+                                href="mailto:syammada@vimtra.com">syammada@vimtra.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                    <h5>Our Vision</h5>
+                    <p>
+                        To be a global leader in investment and development—reshaping
+                        industries, redefining urban landscapes, and driving the next wave
+                        of technological and economic progress.
+                    </p>
+                </div>
+            </div>
+            <div class="row footer-bottom-bar">
+                <div class="col-md-6">
+                    <p>&copy; 2026 Vimtra Ventures. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

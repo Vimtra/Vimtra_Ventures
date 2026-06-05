@@ -754,6 +754,152 @@
           font-weight: 500;
         }
       }
+      /* Custom Modal Styles (adapted from infrastructuredevelopment.html) */
+      .custom-modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        z-index: 1050;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .custom-modal-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .custom-modal-content {
+        position: relative;
+        width: 90%;
+        max-width: 1000px;
+        height: 85vh;
+        max-height: 600px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+
+      .custom-modal-backdrop.active .custom-modal-content {
+        transform: scale(1);
+      }
+
+      .custom-modal-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.85) 0%,
+          rgba(0, 0, 0, 0.7) 50%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        border-radius: 20px;
+      }
+
+      .custom-modal-details {
+        position: relative;
+        z-index: 2;
+        color: var(--white);
+        max-width: 50%;
+      }
+
+      .custom-modal-details h2 {
+        font-weight: 700;
+        color: var(--white);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      }
+
+      .custom-modal-details h2.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .custom-modal-details ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+
+      .custom-modal-details li {
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      }
+
+      .custom-modal-details li.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .custom-modal-details strong {
+        color: var(--light-grey);
+        opacity: 0.8;
+      }
+
+      .custom-modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2.5rem;
+        color: var(--white);
+        cursor: pointer;
+        z-index: 3;
+        line-height: 1;
+        transition: transform 0.3s;
+      }
+
+      .custom-modal-close:hover {
+        transform: scale(1.2);
+      }
+
+      .modal-project-button {
+        display: inline-block;
+        background-color: var(--primary-red);
+        color: var(--white);
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 2rem;
+        transition: background-color 0.3s, transform 0.3s;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .modal-project-button:hover {
+        background-color: #a00000;
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+
+      .modal-project-button.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      }
     </style>
   </head>
 
@@ -763,7 +909,7 @@
       class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
     >
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img src="images/logo.png" alt="Vimtra Ventures Logo" />
         </a>
         <button
@@ -1024,7 +1170,7 @@
               <div class="project-card-content">
                 <h4>The Bays – Golf Lab & Suites</h4>
                 <p class="small">Frisco, Texas</p>
-                <a href="https://tmbays.com/">Learn More &rarr;</a>
+                <a href="#" class="open-project-modal" data-project-title="The Bays – Golf Lab & Suites" data-project-image="images/The-Bays.webp" data-project-details='{"Concept": "High-end golf experience with 24 boutique hotel rooms, private hitting bays, and a 25,000 sqft putting green.", "Key Features": "Partnership with TaylorMade, premium dining, immersive golf technology, and panoramic PGA course views.", "Strategic Partners": "The Beck Group, Akkadia, ClayMoore Engineering, Hospitality Alliance.", "Project Size": "$91 million.", "Status": "Partner agreements executed; development in advanced stages."}'>Learn More &rarr;</a>
               </div>
             </div>
           </div>
@@ -1040,7 +1186,7 @@
               <div class="project-card-content">
                 <h4>Arkagrand</h4>
                 <p class="small">India</p>
-                <a href="https://www.arkagrand.com/">Learn More &rarr;</a>
+                <a href="#" class="open-project-modal" data-project-title="Arkagrand" data-project-image="images/arka-grand.png" data-project-url="https://www.arkagrand.com/" data-project-details='{"Location":"South of Chennai on ECR (Mahabalipuram)","Size":"120 acres","Development":"Luxury master-planned community with residences, country club, 9-hole executive golf course, equestrian facilities, adventure centre, and backwaters","Status":"Active Development"}'>Learn More &rarr;</a>
               </div>
             </div>
           </div>
@@ -1055,9 +1201,9 @@
             >
               <div class="project-card-content">
                 <h4>IGPL</h4>
-                <h6>Indian Golf Premiere League</h6>
+                <h6>Indian Golf Premier League</h6>
                 <p class="small">India</p>
-                <a href="https://theigpl.com/">Learn More &rarr;</a>
+                <a href="#" class="open-project-modal" data-project-title="IGPL - Indian Golf Premier League" data-project-image="images/igpl.webp" data-project-url="https://theigpl.com/" data-project-details='{"Vision":"Transforming golf landscape in India","Formats":"Three formats - The Tour, Turf Wars (city clash), Showdown (extreme golf)","Focus":"Faster-paced, younger, inclusive, modern golf with broadcast-centric culture","Model":"City-based teams and franchise pathways for professional golfers","Status":"Active League"}'>Learn More &rarr;</a>
               </div>
             </div>
           </div>
@@ -1077,7 +1223,7 @@
               <div class="project-card-content">
                 <h4>Dallas Sidekicks</h4>
                 <p class="mb-1 small">Texas</p>
-                <a href="https://www.dallassidekicks.com/">Learn More &rarr;</a>
+                <a href="#" class="open-project-modal" data-project-title="Dallas Sidekicks" data-project-image="images/Dallas Sidekicks.jpg" data-project-url="https://www.dallassidekicks.net/" data-project-details='{"Location":"Allen, Texas (Dallas-Fort Worth Metroplex)","Stadium":"Credit Union of Texas Event Center, Allen","Type":"Professional Indoor Soccer Franchise","League":"Major Arena Soccer League (MASL)","Founded":"2012 (reboot of original 1984-2004 franchise)","Status":"Active League"}'>Learn More &rarr;</a>
               </div>
             </div>
           </div>
@@ -1169,7 +1315,7 @@
         </div>
         <div class="row footer-bottom-bar">
           <div class="col-md-6">
-            <p>&copy; 2025 Vimtra Ventures. All Rights Reserved.</p>
+            <p>&copy; 2026 Vimtra Ventures. All Rights Reserved.</p>
           </div>
           <div class="col-md-6 text-md-end">
             <a href="#" class="me-3">Privacy Policy</a>
@@ -1183,6 +1329,90 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 800, once: true });
+    </script>
+
+    <!-- Custom Project Modal (copied/adapted behavior from infrastructuredevelopment.html) -->
+    <div class="custom-modal-backdrop" id="projectModalBackdrop">
+      <div class="custom-modal-content" id="projectModalContent">
+        <span class="custom-modal-close" id="projectModalClose">&times;</span>
+        <div class="custom-modal-details" id="projectModalDetails">
+          <!-- Project details injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const modalBackdrop = document.getElementById('projectModalBackdrop');
+        const modalContent = document.getElementById('projectModalContent');
+        const modalDetailsContainer = document.getElementById('projectModalDetails');
+        const modalCloseButton = document.getElementById('projectModalClose');
+        const modalTriggers = document.querySelectorAll('.open-project-modal');
+
+        modalTriggers.forEach((button) => {
+          button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const title = this.getAttribute('data-project-title') || '';
+            let details = {};
+            try {
+              const raw = this.getAttribute('data-project-details') || '{}';
+              details = JSON.parse(raw);
+            } catch (e) {
+              details = {};
+            }
+            const image = this.getAttribute('data-project-image') || '';
+            const projectUrl = this.getAttribute('data-project-url') || '';
+
+            if (image) {
+              modalContent.style.backgroundImage = `url('${image}')`;
+            } else {
+              modalContent.style.backgroundImage = '';
+            }
+
+            // Build details HTML
+            let detailsHtml = `<h2 class="modal-detail-item">${title}</h2><ul>`;
+            for (const key in details) {
+              if (Object.prototype.hasOwnProperty.call(details, key)) {
+                detailsHtml += `<li class="modal-detail-item"><strong>${key}:</strong> ${details[key]}</li>`;
+              }
+            }
+            detailsHtml += '</ul>';
+
+            if (projectUrl) {
+              detailsHtml += `<a class="modal-project-button" href="${projectUrl}" target="_blank" rel="noopener">Visit Project Site</a>`;
+            }
+
+            modalDetailsContainer.innerHTML = detailsHtml;
+
+            // Show modal
+            modalBackdrop.classList.add('active');
+
+            // Animate items in sequence
+            const detailItems = modalDetailsContainer.querySelectorAll('.modal-detail-item, .modal-project-button');
+            detailItems.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add('visible');
+              }, 200 + 150 * index);
+            });
+          });
+        });
+
+        function closeModal() {
+          modalBackdrop.classList.remove('active');
+          const detailItems = modalDetailsContainer.querySelectorAll('.modal-detail-item, h2, .modal-project-button');
+          detailItems.forEach((item) => {
+            item.classList.remove('visible');
+          });
+        }
+
+        modalCloseButton.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', function (event) {
+          if (event.target === modalBackdrop) {
+            closeModal();
+          }
+        });
+      });
     </script>
   </body>
 </html>
